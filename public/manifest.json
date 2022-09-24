@@ -1,0 +1,25 @@
+{
+  "name": "Líderes Ifood",
+  "short_name": "Líderes Ifood",
+  "background_color": "#ea1d2c",
+  "theme_color": "#ffffff",
+  "description": "Como nossos líderes estão desenvolvendo novos líderes?",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://static-images.ifood.com.br/webapp/logo-smile-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://static-images.ifood.com.br/webapp/logo-smile-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

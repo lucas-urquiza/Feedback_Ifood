@@ -1,0 +1,445 @@
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Average Sans', sans-serif;
+  font-size: 10px;
+  background-color: #FCEBEA;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.retangle {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 260px;
+  height: 10px;
+  background-color: rgb(81, 47, 47);
+  transition: transform 2s linear;
+}
+
+.infoBox {
+  width: 45%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EA1D2C;
+}
+
+.infoBox p {
+  width: 70%;
+  margin-top: 24px;
+  color: #FCEBEA;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.resultLink {
+  color: #EA1D2C;
+  
+}
+
+.infoBox h1 {
+  color: #FCEBEA;
+  font-size: 48px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.questionBox {
+  width: 55%;
+  padding: 0 20px;
+  height: 100vh;
+  background-color: #FCEBEA;
+}
+
+
+
+.questionTitle {
+  margin-top:30%;
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+.questionTitle__initialText {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 24px;
+  color: rgb(58, 58, 58);
+}
+.answerHint {
+  font-size: 18px;
+  display: block;
+  margin: 24px 0 24px 0 ;
+  color: rgb(58, 58, 58);
+  text-align: center;
+}
+
+.answerBox {
+ margin-top: 40px;
+ text-align: center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+.answerBox button {
+  background-color: #EA1D2C;
+  border: 2px black;
+  font-size: 22px;
+  margin: 0 6px;
+  border-radius: 4px;
+  padding: 12px 32px;
+  color: white;
+  cursor: pointer;
+  transition: background .2s linear;
+}
+
+.answerBox button:hover {
+  background-color: #ef5753;
+}
+
+.finishBox {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #EA1D2C;
+  color: #FCEBEA;
+  text-align: center;
+}
+
+.finishBox h1 {
+  color: #FCEBEA;
+  font-size: 48px;
+  padding: 0 12px;
+}
+
+.finishBox h3 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.inputName {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 12px 32px;
+  font-size: 18px;
+  margin-top: 18px;
+  transition: opacity .2s linear;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.startButton {
+  background-color: #ef5753;
+  border-radius: 4px;
+  color:white;
+  cursor: pointer;
+  border: 2px black;
+  padding: 12px 32px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 18px;
+  transition: opacity .2s linear;
+  max-width: 92%;
+  width: 220px;
+}
+
+.startButton:hover {
+  opacity: .8;
+}
+
+
+.restartButton {
+  background-color: #ef5753;
+  border-radius: 4px;
+  color:white;
+  cursor: pointer;
+  border: 2px black;
+  padding: 12px 32px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 18px;
+  transition: opacity .2s linear;
+}
+
+.startFeedbackForm{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  font-size: 16px;
+  margin-top: 16px
+}
+
+.startFeedbackForm input {
+  border: 1px solid black;
+  padding: 2px;
+  margin-top: 10px
+}
+
+.restartButton:hover {
+  opacity: .8;
+}
+
+.question__number {
+  font-size: 18px;
+  color: #ef5753;
+}
+
+.resultTitle {
+  font-size: 3.2rem;
+}
+
+.result__image__wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.result__image__wrapper img {
+  max-width: 90%;
+  margin-bottom: -10px;
+}
+
+.questionBox__wrapper{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapperReverse {
+  display: flex;
+}
+
+
+@media (max-width: 900px)
+{
+
+.hideOnMobile {
+  display: none;
+}
+  html {
+    background-color: #EA1D2C;
+  }
+
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .wrapperReverse {
+    flex-direction: column;
+  }
+
+  .inputName {
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 12px 14px;
+    font-size: 18px;
+    margin-top: 18px;
+    transition: opacity .2s linear;
+    margin-right: 8px;
+  }
+  .restartButton {
+    padding: 12px 24px;
+    font-size: 20px;
+  }
+
+   .startButton {
+    padding: 12px 24px;
+    font-size: 20px;
+  }
+
+  .infoBox {
+    height: auto;
+    padding:  0 0 100px 0;
+    width: 100%;
+  }
+
+  .infoBox p {
+    width: auto;
+    margin-top: 24px;
+    color: #FCEBEA;
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .infoBox h1 {
+    margin-top:20px;
+    color: #FCEBEA;
+    font-size: 28px;
+    text-align: center;
+    padding: 0 12px;
+  }
+
+  .questionBox {
+    min-height: 320px;
+    height: auto;
+    padding: 30px 16px;
+    width: 100%;
+  }
+
+  .questionTitle {
+    margin-top: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .answerBox button {
+    font-size: 20px;
+    margin: 0 6px;
+    padding: 8px 16px;
+  }
+
+  .result__image__wrapper img {
+    max-width: 100%;
+  }
+
+}
+
+.inputContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.inputContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.inputContainer:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.inputContainer input:checked~.checkmark {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.inputContainer input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.inputContainer .checkmark:after {
+  top: 8px;
+  left: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: red;
+}
+
+.type_avaliation_box {
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 12px;
+}
+.type_avaliation_box label:hover {
+  opacity: .8;
+  cursor: pointer;
+  }
+
+.balance {
+  margin-top:60px;
+  width: 200px;
+}
+
+.balance__retangle {
+  /* height: 6px; */
+  margin-bottom: -66px;
+  transition: transform 2s linear;
+}
+
+.balance__base {
+  margin: 0 auto;
+  position: relative;
+  margin-top: -14px;
+}
+
+.text__left {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -20px;
+  width: auto;
+  font-size: 14px;
+  color: antiquewhite;
+  
+}
+
+.text__right {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: -4px;
+  font-size: 14px;
+  color: antiquewhite;
+}
+
+.answer__ballon {
+  width: 100%;
+  font-size: 16px;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  padding: 4px 0;
+  letter-spacing: 1px;
+  background-color: #ffab40;
+}
