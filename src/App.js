@@ -78,6 +78,24 @@
 
 
     const submitResult = async () => {
+
+      const CalcularResultado = () => {
+        let Resultado;
+        if(peso[0] > 12 && peso[1] > 12){
+          Resultado = "Liderança Segura"
+        }
+        if(peso[0] <= 12 && peso[1] <= 12){
+          Resultado = "Pontuação abaixo para as duas caracteristicas"
+        }
+        if(peso[0] <= 12 && peso[1] > 12){
+          Resultado = "Desafiador"
+        }
+        if (peso[0] > 12 && peso[1] <= 12) {
+          Resultado = "Conforto"
+        }
+        return Resultado
+      }
+
       const feedbackInformations = {
         avaliador: nameToFeedback,
         avaliado: nameToFeedback,
@@ -85,9 +103,10 @@
         respostas: answers,
         dataAvaliacao: new Date().toLocaleString('pt-br'),
         pesoConforto: peso[0],
-        pesoDesafiador: peso[1]
+        pesoDesafiador: peso[1],
+        resultado: CalcularResultado()
       }
-
+      console.log(feedbackInformations)
       try{
         // Caso necessário alterar o banco de dados, pode alterar as linhas abaixo, enviando o objeto de feedbackInformations para o novo endpoint
         const collectionRef = collection(database, 'feedbacks');
