@@ -98,7 +98,7 @@
 
       const feedbackInformations = {
         avaliador: nameToFeedback,
-        avaliado: nameToFeedback,
+        avaliado: targetNameToFeedback,
         tipoDeAvaliacao: feedbackType,
         respostas: answers,
         dataAvaliacao: new Date().toLocaleString('pt-br'),
