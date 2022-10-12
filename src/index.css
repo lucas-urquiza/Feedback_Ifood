@@ -136,8 +136,8 @@ html {
   border-radius: 4px;
   border: none;
   outline: none;
-  padding: 12px 32px;
-  font-size: 18px;
+  padding: 12px 18px;
+  font-size: 14px;
   margin-top: 18px;
   transition: opacity .2s linear;
 }
@@ -148,6 +148,8 @@ html {
   align-items: center;
   flex-direction: column;
 }
+
+.form::placeholder {}
 
 .startButton {
   background-color: #ef5753;
@@ -258,7 +260,7 @@ html {
     border: none;
     outline: none;
     padding: 12px 14px;
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 18px;
     transition: opacity .2s linear;
     margin-right: 8px;
