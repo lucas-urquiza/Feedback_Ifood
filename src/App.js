@@ -80,20 +80,27 @@
     const submitResult = async () => {
 
       const CalcularResultado = () => {
-        let Resultado;
-        if(peso[0] > 12 && peso[1] > 12){
-          Resultado = "Liderança Segura"
-        }
+     
         if(peso[0] <= 12 && peso[1] <= 12){
-          Resultado = "Pontuação abaixo para as duas caracteristicas"
+          return "Pontuação abaixo para as duas caracteristicas"
         }
         if(peso[0] <= 12 && peso[1] > 12){
-          Resultado = "Desafiador"
+          return "Desafiador"
         }
         if (peso[0] > 12 && peso[1] <= 12) {
-          Resultado = "Conforto"
+          return "Conforto"
         }
-        return Resultado
+
+        if(peso[0] > 12 && peso[1] > 12){
+          if((peso[0] > peso[1]) && ((peso[0] - peso[1]) >= 3) ){
+            return "Conforto"
+          } else  if((peso[1] > peso[0]) && ((peso[1] - peso[0]) >= 3) ){
+            return "Desafiador"
+          } else {
+            return "Liderança Segura"
+          }
+        }
+    
       }
 
       const feedbackInformations = {
@@ -135,16 +142,23 @@
           setAngulo(`0`); // Mostra como liderança segura e com o texto para buscar mais conhecimento. 
         }
 
-        if(peso[0] <= 12 && peso[1] > 12){
+         if(peso[0] <= 12 && peso[1] > 12){
           setAngulo(`15`); // muito desafio
         }
-
+        
         if (peso[0] > 12 && peso[1] <= 12) {
           setAngulo(`-15`); // muito conforto
         }
 
+
         if(peso[0] > 12 && peso[1] > 12){
-          setAngulo(`0`); // Lider 
+          if((peso[0] > peso[1]) && ((peso[0] - peso[1]) >= 3) ){
+             setAngulo(`-15`); // muito conforto
+          } else if((peso[1] > peso[0]) && ((peso[1] - peso[0]) >= 3) ){
+            setAngulo(`15`); // muito desafio
+          } else {
+            setAngulo(`0`); // Lider 
+          }
         }
         
         AlertError.fire({
@@ -156,6 +170,7 @@
         
         submitResult()
         }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[showResult])
 
