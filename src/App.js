@@ -92,9 +92,9 @@
         }
 
         if(peso[0] > 12 && peso[1] > 12){
-          if((peso[0] > peso[1]) && ((peso[0] - peso[1]) >= 3) ){
+          if((peso[0] > peso[1]) && ((peso[0] - peso[1]) >= 2) ){
             return "Conforto"
-          } else  if((peso[1] > peso[0]) && ((peso[1] - peso[0]) >= 3) ){
+          } else  if((peso[1] > peso[0]) && ((peso[1] - peso[0]) >= 2) ){
             return "Desafiador"
           } else {
             return "Liderança Segura"
@@ -152,9 +152,9 @@
 
 
         if(peso[0] > 12 && peso[1] > 12){
-          if((peso[0] > peso[1]) && ((peso[0] - peso[1]) >= 3) ){
+          if((peso[0] > peso[1]) && ((peso[0] - peso[1]) >= 2) ){
              setAngulo(`-15`); // muito conforto
-          } else if((peso[1] > peso[0]) && ((peso[1] - peso[0]) >= 3) ){
+          } else if((peso[1] > peso[0]) && ((peso[1] - peso[0]) >= 2) ){
             setAngulo(`15`); // muito desafio
           } else {
             setAngulo(`0`); // Lider 
