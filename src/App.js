@@ -1,6 +1,5 @@
   import Swal from 'sweetalert2'
   import withReactContent from 'sweetalert2-react-content'
-
   import { useEffect, useState } from "react";
   import { QUESTIONS } from './constants'
   import retangulo from './imgs/retangulo.svg';
@@ -104,7 +103,6 @@
       }
 
       const feedbackInformations = {
-        avaliador: nameToFeedback,
         avaliado: targetNameToFeedback,
         tipoDeAvaliacao: feedbackType,
         respostas: answers,
@@ -181,11 +179,10 @@
 
         {/* Lado Esquerdo */}
         <div className="infoBox">
-          {canStart ? ( <h1>Olá FoodLover, quem você <br/> deseja Avaliar?</h1>) : (
-            <>
-            <h1 className="hideOnMobile">Como {targetNameToFeedback ? `${targetNameToFeedback} está` : 'nossos líderes estão'} desenvolvendo novos líderes?
+          {canStart ? ( <h1>Olá Foodlover digite o e-mail de quem você deseja avaliar</h1>) : (
+            <h1 className="hideOnMobile">
+              Como o Foodlover avaliado esta desenvolvendo novos lideres?
             </h1>
-            </>
           ) }
         
      
@@ -275,9 +272,6 @@
                         <br/>
                         <br/>
                         Recomendamos que você realize o teste a cada 2 meses. 
-                            
-                      
-                        
                       </span>
                       </> 
                     )}
