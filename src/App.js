@@ -179,9 +179,9 @@
 
         {/* Lado Esquerdo */}
         <div className="infoBox">
-          {canStart ? ( <h1>Olá Foodlover digite o e-mail de quem você deseja avaliar</h1>) : (
+          {canStart ? ( <h1>Olá foodLover, digite o e-mail de quem você deseja avaliar</h1>) : (
             <h1 className="hideOnMobile">
-              Como o Foodlover avaliado esta desenvolvendo novos lideres?
+              Como o(a) foodLover avaliado(a) está desenvolvendo novos(as) líderes?
             </h1>
           ) }
         
