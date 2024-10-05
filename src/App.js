@@ -161,7 +161,7 @@
         
         AlertError.fire({
           icon: 'success',
-          title: 'Obrigado foodlover!',
+          title: 'Obrigado!',
           text: `Avaliação de ${targetNameToFeedback} enviada com sucesso`,
         })
 
@@ -179,9 +179,9 @@
 
         {/* Lado Esquerdo */}
         <div className="infoBox">
-          {canStart ? ( <h1>Olá foodLover, digite o e-mail de quem você deseja avaliar</h1>) : (
+          {canStart ? ( <h1>Olá, digite o e-mail de quem você deseja avaliar</h1>) : (
             <h1 className="hideOnMobile">
-              Como o(a) foodLover avaliado(a) está desenvolvendo novos(as) líderes?
+            Como você(a), enquanto avaliado(a), está desenvolvendo novos(a) líderes?
             </h1>
           ) }
         
